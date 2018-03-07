@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour {
     // private var
     private bool isGrounded;
     private bool jumpRequest;
-    private bool facingRight = true;
+    public static bool facingRight = true;
 
     // components
     private Rigidbody2D myRigidbody;
@@ -38,11 +38,11 @@ public class PlayerController : MonoBehaviour {
         Animate();
         Gravity();
         CheckInput();
-        Move();
     }
 
     void FixedUpdate () {
 
+        Move();
         CheckJump();
     }
 
